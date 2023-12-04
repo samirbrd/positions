@@ -1,9 +1,9 @@
 #!/bin/sh
-cd 'G:\\My Drive\\Trading\\Position Summary'
-sleep 2
+cd 'G:\\My Drive\\Trading\\PosSummary'
+sleep 0.5
 git add .
-sleep 2
+sleep 0.5
 git commit -m "msgs"
-sleep 2
+sleep 0.5
 git push
-sleep 2
+sleep 0.5
