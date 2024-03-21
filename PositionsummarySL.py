@@ -53,7 +53,7 @@ elif add_selectbox=='Neptune-5P':
     df_filter=df_position[(df_position['Strategy'].str[0:2]== 'P5') & (df_position['Strategy'].str[-1]=='N')]   
 elif add_selectbox=='Total':
     df_filter=df_position.copy()
-total_position=df_position['Position'].sum()
+total_position=df_filter['Position'].sum()
 
 st.write('Total Bank Nifty Position Size is '+str(total_position))
 st.write(df_filter)
