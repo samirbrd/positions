@@ -19,16 +19,16 @@ path_string_1='./'
 file_string_1=path_string_1+'strategyposition.csv'
 df_position=pd.read_csv(file_string_1)
 file_string_2=path_string_1+'positionsummary.csv'
-# df_strategy=pd.read_csv(file_string_2)
-df_position_1=pd.read_csv(path_string_1+'Positions.csv')
-df_position=pd.concat([df_position,df_position_1])
+# # df_strategy=pd.read_csv(file_string_2)
+# df_position_1=pd.read_csv(path_string_1+'Positions.csv')
+# df_position=pd.concat([df_position,df_position_1])
 #df_position=df_position.merge(df_strategy,left_on='Strategy',right_on='Strategy')
 #cols=['ID','Strategy','Position','Trade Price','Trade Time','Eval Time','Status']
 #df_position=df_position[cols]
 
 add_selectbox = st.sidebar.selectbox(
     'Position in Account?',
-    ('HUF', 'Samrup', 'Star','Galaxy','Neptune','Galaxy-5P','Neptune-5P','Total')
+    ('HUF', 'Samrup', 'Star','Galaxy','Neptune','SMS','RSS','Total')
 )
 if add_selectbox=='HUF':
     st.write(add_selectbox)
@@ -45,10 +45,10 @@ elif add_selectbox=='Galaxy':
 elif add_selectbox=='Neptune':
     st.write(add_selectbox)
     df_filter=df_position[(df_position['Strategy'].str[0]== 'N') & (df_position['Strategy'].str[-1]=='N')]
-elif add_selectbox=='Galaxy-5P':
+elif add_selectbox=='SMS':
     st.write(add_selectbox)
     df_filter=df_position[(df_position['Strategy'].str[0:2]== 'P5') & (df_position['Strategy'].str[-1]=='G')]
-elif add_selectbox=='Neptune-5P':
+elif add_selectbox=='RSS':
     st.write(add_selectbox)
     df_filter=df_position[(df_position['Strategy'].str[0:2]== 'P5') & (df_position['Strategy'].str[-1]=='N')]   
 elif add_selectbox=='Total':
