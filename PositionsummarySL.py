@@ -40,7 +40,7 @@ if add_selectbox=='HUF':
 elif add_selectbox=='Samrup':
     st.write(add_selectbox)
     df_filter=df_position[df_position['Strategy'].str[-1]== 'S']
-    df_filter_mc=df_position_mc[(df_position_mc['Strategy'].str[-1]== 'S') & (df_position_mc['Strategy'].str[-2:-1]!='R')]
+    df_filter_mc=df_position_mc[(df_position_mc['Strategy'].str[-1]== 'S') & ((df_position_mc['Strategy'].str[-2:-1]!='R') | (df_position_mc['Strategy'].str[-2:-1]!='S'))]
 elif add_selectbox=='Star':
     st.write(add_selectbox)
     df_filter=df_position[df_position['Strategy'].str[-1]== 'M']
