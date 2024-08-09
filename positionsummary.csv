@@ -1,39 +1,97 @@
 Account,BN Calls,BN Puts,BN Futures,MC Futures,PNL,M2M,Margin Available,Cash Balance
-ER6842,-6000,0,-1260,0,7181,-356520,5740674,656020
-SW7768,-9900,0,-1470,0,1280296,34990,15141119,2318974
+ER6842,-6000,0,-1260,0,-13180,-376882,5705285,624230
+SW7768,-9900,0,-1470,0,1281552,36247,15140693,2325219
 JK0143,-3600,0,-1260,"tradingsymbol         MIDCPNIFTY24AUGFUT
+exchange                             NFO
+instrument_token                13537794
+product                             NRML
+quantity                               0
+overnight_quantity                     0
+multiplier                             1
+average_price                        0.0
+close_price                          0.0
+last_price                      12688.65
+value                            -5080.0
+pnl                              -5080.0
+m2m                              -5080.0
+unrealised                       -5080.0
+realised                               0
+buy_quantity                         400
+buy_price                    12670.51875
+buy_value                      5068207.5
+buy_m2m                        5068207.5
+sell_quantity                        400
+sell_price                   12657.81875
+sell_value                     5063127.5
+sell_m2m                       5063127.5
+day_buy_quantity                     400
+day_buy_price                12670.51875
+day_buy_value                  5068207.5
+day_sell_quantity                    400
+day_sell_price               12657.81875
+day_sell_value                 5063127.5
+Name: 22, dtype: object",282783,-351760,4486596,509219
+OZS912,-4200,0,-1050,"tradingsymbol         MIDCPNIFTY24AUGFUT
 exchange                             NFO
 instrument_token                13537794
 product                             NRML
 quantity                             200
 overnight_quantity                     0
 multiplier                             1
-average_price                12670.51875
+average_price                 12685.5625
 close_price                          0.0
-last_price                      12683.95
-value                         -2540610.0
-pnl                              -3820.0
-m2m                              -3820.0
-unrealised                       -3820.0
+last_price                      12688.65
+value                         -2537112.5
+pnl                                617.5
+m2m                                617.5
+unrealised                         617.5
 realised                               0
-buy_quantity                         400
-buy_price                    12670.51875
-buy_value                      5068207.5
-buy_m2m                        5068207.5
-sell_quantity                        200
-sell_price                    12637.9875
-sell_value                     2527597.5
-sell_m2m                       2527597.5
-day_buy_quantity                     400
-day_buy_price                12670.51875
-day_buy_value                  5068207.5
-day_sell_quantity                    200
-day_sell_price                12637.9875
-day_sell_value                 2527597.5
-Name: 22, dtype: object",313400,-321143,4197588,537816
-OZS912,-4200,0,-1050,0,778610,-299756,5386551,799510
-SLV491,-2700,0,-1260,0,214299,-380824,5505321,710321
-SS3084,-1800,0,-1470,0,262359,-331231,3381785,-838734
-XK4024,-9000,0,-1470,0,-44146,-374775,37928773,-4086669
-GALAXY,-4800,0,-840,0,0,-348360,4451148,0
-NEPTUNE,-5400,0,-840,0,0,-348120,3213875,0
+buy_quantity                         200
+buy_price                     12685.5625
+buy_value                      2537112.5
+buy_m2m                        2537112.5
+sell_quantity                          0
+sell_price                           0.0
+sell_value                           0.0
+sell_m2m                             0.0
+day_buy_quantity                     200
+day_buy_price                 12685.5625
+day_buy_value                  2537112.5
+day_sell_quantity                      0
+day_sell_price                         0
+day_sell_value                         0
+Name: 21, dtype: object",709445,-368921,5001567,736790
+SLV491,-2700,0,-1050,"tradingsymbol         MIDCPNIFTY24AUGFUT
+exchange                             NFO
+instrument_token                13537794
+product                             NRML
+quantity                             200
+overnight_quantity                     0
+multiplier                             1
+average_price                    12677.4
+close_price                          0.0
+last_price                       12688.4
+value                         -2535480.0
+pnl                               2200.0
+m2m                               2200.0
+unrealised                        2200.0
+realised                               0
+buy_quantity                         200
+buy_price                        12677.4
+buy_value                      2535480.0
+buy_m2m                        2535480.0
+sell_quantity                          0
+sell_price                           0.0
+sell_value                           0.0
+sell_m2m                             0.0
+day_buy_quantity                     200
+day_buy_price                    12677.4
+day_buy_value                  2535480.0
+day_sell_quantity                      0
+day_sell_price                         0
+day_sell_value                         0
+Name: 19, dtype: object",192778,-402345,6214935,695345
+SS3084,-1800,0,-1470,0,217188,-376402,3322743,-897310
+XK4024,-9000,0,-1470,0,-44146,-374775,37902923,-4109602
+GALAXY,-4800,0,-840,0,0,-386268,4451148,0
+NEPTUNE,-5400,0,-840,0,0,-385968,3213875,0
