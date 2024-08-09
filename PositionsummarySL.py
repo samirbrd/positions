@@ -20,6 +20,7 @@ file_string_1=path_string_1+'strategyposition.csv'
 df_position=pd.read_csv(file_string_1)
 file_string_2=path_string_1+'strategypositionmc.csv'
 df_position_mc=pd.read_csv(file_string_2)
+print(df_position_mc.head())
 # # df_strategy=pd.read_csv(file_string_2)
 # df_position_1=pd.read_csv(path_string_1+'Positions.csv')
 # df_position=pd.concat([df_position,df_position_1])
