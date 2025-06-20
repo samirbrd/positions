@@ -9,8 +9,9 @@ Created on Thu Sep 24 06:12:53 2020
 import streamlit as st
 import numpy as np
 import pandas as pd
+import datetime
 
-
+st. cache_data. clear()
 st.title('Position Size BankNifty')
 #st.write("Here's my first attempt at writing some text")
 
@@ -21,13 +22,19 @@ df_position=pd.read_csv(file_string_1)
 file_string_2=path_string_1+'strategypositionmc.csv'
 df_position_mc=pd.read_csv(file_string_2)
 file_string_3=path_string_1+'positionsummary.csv'
-print(df_position_mc.head())
-# # df_strategy=pd.read_csv(file_string_2)
-# df_position_1=pd.read_csv(path_string_1+'Positions.csv')
-# df_position=pd.concat([df_position,df_position_1])
-#df_position=df_position.merge(df_strategy,left_on='Strategy',right_on='Strategy')
-#cols=['ID','Strategy','Position','Trade Price','Trade Time','Eval Time','Status']
-#df_position=df_position[cols]
+#print(df_position_mc.head())
+file_string_4=path_string_1+'strategy.csv'
+file_string_5=path_string_1+'current_time.csv'
+df_current_time=pd.read_csv(file_string_5)
+df_strategy=pd.read_csv(file_string_4)
+df_position=pd.merge(df_position,df_strategy,on='Strategy')
+df_position_mc=pd.merge(df_position_mc,df_strategy,on='Strategy')
+cols=cols=['ID','Strategy', 'Position', 'Trade Price', 'Trade Time', 'Eval Time', 'Status']
+df_position=df_position[cols]
+df_position_mc=df_position_mc[cols]
+df_position=df_position.sort_values('ID')
+df_position_mc=df_position_mc.sort_values('ID')
+
 total_position=df_position['Position'].sum()
 total_position_mc=df_position_mc['Position'].sum()
 add_selectbox = st.sidebar.selectbox(
@@ -82,5 +89,7 @@ st.write('Total M2M for day: '+str(total_m2m))
 st.write('Total Margin Available: '+str(total_margin_available))
 st.write('Actual BN Futures: '+str(total_bn_futures))
 st.write('Actual MC Futures: '+str(total_mc_futures))
-st.write('Theoretical BN Position(Total): '+str(total_position))
-st.write('Theoretical MC Position(Total): '+str(total_position_mc))
+st.write('Time Updated Till: '+str(df_current_time['Time'].iloc[0]))
+
+# st.write('Theoretical BN Position(Total): '+str(total_position))
+# st.write('Theoretical MC Position(Total): '+str(total_position_mc))
